@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Quiz - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="course-catalog.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="quiz-section">
+        <div class="quiz-container pro-card">
+            <h2>Basic Quiz</h2>
+            <div class="quiz-timer" id="quiz-timer">Time: 00:00</div>
+            <form id="quiz-form">
+                <div id="quiz-questions"></div>
+                <button type="submit" class="cta" id="submit-quiz" style="margin-top:1.5rem; width:100%; font-size:1.1rem;">Submit Answers</button>
+            </form>
+            <div id="quiz-results" style="display:none;"></div>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 

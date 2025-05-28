@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="course-catalog.html" class="cta">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="catalog-section">
+        <h2>Course Catalog</h2>
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="programming">Programming</button>
+            <button class="filter-btn" data-category="design">Design</button>
+            <button class="filter-btn" data-category="business">Business</button>
+        </div>
+        <div class="course-gallery" id="course-gallery">
+            <!-- Course cards will be rendered here by JS -->
+        </div>
+        <div id="preview-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">&times;</span>
+                <div id="preview-content"></div>
+            </div>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 

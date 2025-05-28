@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="profile.html" class="cta">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-avatar">
+                <img id="profile-img" src="https://ui-avatars.com/api/?name=User" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2 id="profile-name">User Name</h2>
+                <p id="profile-email">user@example.com</p>
+                <button class="cta" id="edit-profile-btn">Edit Profile</button>
+            </div>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 

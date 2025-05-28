@@ -1,16 +1,28 @@
 <?php
-// This is where you'd normally insert into a database
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $courseId = $_POST['course_id'] ?? '';
-    $rating = $_POST['rating'] ?? '';
-    $review = $_POST['review'] ?? '';
+session_start();
+header('Content-Type: application/json');
+$conn = new mysqli("localhost", "root", "", "elearning");
+if ($conn->connect_error) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'DB Connection failed']);
+    exit;
+}
 
-    echo "<h2>Thank you for rating!</h2>";
-    echo "<p>Course ID: $courseId</p>";
-    echo "<p>Your Rating: $rating ★</p>";
-    echo "<p>Your Review: " . htmlspecialchars($review) . "</p>";
-    echo '<p><a href="index.php">Back to courses</a></p>';
+$courseId = intval($_POST['course_id'] ?? 0);
+$rating = intval($_POST['rating'] ?? 0);
+$review = $conn->real_escape_string($_POST['review'] ?? '');
+$user_id = $_SESSION['user_id'] ?? 1; // fallback for demo
+
+if ($courseId && $rating >= 1 && $rating <= 5 && $user_id) {
+    $result = $conn->query("INSERT INTO course_ratings (course_id, user_id, rating, review) VALUES ($courseId, $user_id, $rating, '$review')");
+    if ($result) {
+        echo json_encode(['success' => true, 'message' => 'Thank you for your rating!']);
+    } else {
+        http_response_code(500);
+        echo json_encode(['success' => false, 'message' => 'Database insert failed.']);
+    }
 } else {
-    echo "Invalid request.";
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Invalid data']);
 }
 ?>

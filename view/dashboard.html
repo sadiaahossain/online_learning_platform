@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="course-catalog.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="dashboard-section">
+        <h2>Welcome to Your Dashboard</h2>
+        <div class="dashboard-overview">
+            <div class="dashboard-card" id="enrolled-card">
+                <h3>Courses Enrolled</h3>
+                <p>5</p>
+            </div>
+            <div id="enrolled-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close-modal" id="close-enrolled-modal">&times;</span>
+                    <h3>Enrolled Courses</h3>
+                    <ul id="enrolled-list"></ul>
+                </div>
+            </div>
+            <div class="dashboard-card" id="progress-card">
+                <h3>Progress</h3>
+                <p>72%</p>
+            </div>
+            <div class="dashboard-card" id="basic-quiz-card">
+                <h3>Basic Quiz</h3>
+                <p>Take a quick quiz to test your knowledge!</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Notifications</h3>
+                <p>2 New</p>
+            </div>
+        </div>
+        <div class="dashboard-actions">
+            <h3>Quick Actions</h3>
+            <button class="cta" id="view-courses-btn">View Courses</button>
+            <button class="cta">Start New Course</button>
+            <button class="cta" id="view-profile-btn">View Profile</button>
+            <button class="cta" id="discussion-btn">Discussions</button>
+            <button class="cta" id="rating-btn">Course Rating</button>
+            <button class="cta" id="faq-btn">FAQ</button>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 

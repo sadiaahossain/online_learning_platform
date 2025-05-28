@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Profile - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="course-catalog.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="instructor-section">
+        <div class="instructor-container pro-card">
+            <div class="instructor-header">
+                <img id="instructor-avatar" class="instructor-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor Photo">
+                <h2 id="instructor-name">John Doe</h2>
+                <div id="instructor-badges" class="instructor-badges"></div>
+            </div>
+            <div class="instructor-bio" id="instructor-bio">Experienced web developer and educator with a passion for teaching modern web technologies.</div>
+            <div class="instructor-history">
+                <h4>Teaching History & Specialties</h4>
+                <ul id="instructor-history">
+                    <li>JavaScript Essentials (2018-2023)</li>
+                    <li>React for Beginners (2020-2023)</li>
+                    <li>UI/UX Design Fundamentals (2019-2023)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 

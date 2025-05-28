@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Dashboard - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LearnOnline</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="course-catalog.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn" class="cta" style="border:none; background:#007bff; color:#fff; cursor:pointer;">Logout</button></li>
+        </ul>
+    </nav>
+    <section class="progress-section">
+        <div class="progress-container pro-card">
+            <h2>Course Progress</h2>
+            <div class="progress-circle-wrapper">
+                <svg class="progress-circle" width="120" height="120">
+                    <circle class="progress-bg" cx="60" cy="60" r="50" stroke-width="12" fill="none" />
+                    <circle class="progress-bar" cx="60" cy="60" r="50" stroke-width="12" fill="none" stroke-linecap="round" />
+                </svg>
+                <div class="progress-percent" id="progress-percent">0%</div>
+            </div>
+            <ul class="module-list" id="module-list">
+                <!-- Modules will be rendered here by JS -->
+            </ul>
+            <button class="cta" id="continue-learning-btn" style="margin-top:1.5rem; width:100%; font-size:1.1rem;">Continue Learning</button>
+        </div>
+    </section>
+    <script src="../rendering/main.js"></script>
+</body>
+</html> 
